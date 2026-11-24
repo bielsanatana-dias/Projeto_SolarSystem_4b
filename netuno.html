@@ -1,0 +1,765 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Netuno</title>
+
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/index.css">
+</head>
+
+<style>
+
+    html {
+        scroll-behavior: smooth;
+    }
+
+    body {
+        color: white;
+    }
+
+    /* =========================
+       CAPA
+       ========================= */
+
+    .imagem {
+        min-height: 100vh;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        text-align: center;
+
+        padding: 120px 20px 60px;
+
+        background:
+            linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.65)),
+            url("img/FundoDeCadaPagina/fundonetuno.jpg")
+            center center / cover no-repeat fixed;
+    }
+
+    .imagem h1 {
+        font-size: clamp(2.5rem, 6vw, 5rem);
+        margin-bottom: 20px;
+        text-shadow: 0 4px 20px rgba(0, 0, 0, 0.8);
+    }
+
+    .imagem h3 {
+        margin-top: 10px;
+    }
+
+    .imagem .badge {
+        padding: 10px 18px;
+        border-radius: 30px;
+    }
+
+
+    /* =========================
+       CONTEÚDO
+       ========================= */
+
+    .conteudo-netuno {
+        width: 90%;
+        max-width: 1100px;
+        margin: 60px auto;
+    }
+
+
+    /* =========================
+       ALERT
+       ========================= */
+
+    .alert-netuno {
+        background-color: rgba(15, 23, 42, 0.9);
+        color: white;
+
+        border: 1px solid rgba(255, 255, 255, 0.15);
+
+        border-radius: 15px;
+    }
+
+
+    /* =========================
+       CARDS DE INFORMAÇÃO
+       ========================= */
+
+    .info-card {
+        height: 100%;
+
+        background-color: rgba(15, 23, 42, 0.88);
+        color: white;
+
+        border: 1px solid rgba(255, 255, 255, 0.08);
+
+        border-radius: 18px;
+
+        transition: 0.3s ease;
+    }
+
+    .info-card:hover {
+        transform: translateY(-6px);
+    }
+
+    .info-card .card-body {
+        text-align: center;
+    }
+
+    .info-card h5 {
+        margin-bottom: 15px;
+    }
+
+    .info-numero {
+        font-size: 2rem;
+        font-weight: bold;
+    }
+
+
+    /* =========================
+       ACCORDION
+       ========================= */
+
+    .accordion {
+        margin-top: 50px;
+    }
+
+    .accordion-item {
+        background-color: rgba(15, 23, 42, 0.95);
+        color: white;
+
+        border-color: rgba(255, 255, 255, 0.1);
+    }
+
+    .accordion-button {
+        background-color: rgba(15, 23, 42, 0.95);
+        color: white;
+    }
+
+    .accordion-button:not(.collapsed) {
+        background-color: rgba(30, 41, 59, 0.95);
+        color: white;
+
+        box-shadow: none;
+    }
+
+    .accordion-button:focus {
+        box-shadow: none;
+    }
+
+    .accordion-body {
+        line-height: 1.8;
+    }
+
+
+    /* =========================
+       NETUNO
+       ========================= */
+
+    .netuno {
+        margin-top: 70px;
+
+        padding: 40px;
+
+        background-color: rgba(15, 23, 42, 0.88);
+
+        border-radius: 20px;
+
+        border: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    .netuno img {
+        width: 100%;
+        max-width: 500px;
+
+        border-radius: 18px;
+
+        display: block;
+        margin: 0 auto;
+    }
+
+    .netuno h2 {
+        margin-bottom: 20px;
+    }
+
+    .netuno p {
+        color: #d1d5db;
+        line-height: 1.8;
+    }
+
+
+    /* =========================
+       PROGRESS BAR
+       ========================= */
+
+    .comparacao {
+        margin-top: 70px;
+
+        padding: 40px;
+
+        background-color: rgba(15, 23, 42, 0.88);
+
+        border-radius: 20px;
+    }
+
+    .comparacao h2 {
+        margin-bottom: 30px;
+        text-align: center;
+    }
+
+    .progress {
+        height: 25px;
+
+        background-color: rgba(255, 255, 255, 0.12);
+    }
+
+
+    /* =========================
+       CURIOSIDADE
+       ========================= */
+
+    .curiosidade {
+        margin-top: 70px;
+
+        text-align: center;
+
+        padding: 50px 20px;
+    }
+
+    .curiosidade p {
+        color: #d1d5db;
+        max-width: 700px;
+        margin: 20px auto;
+        line-height: 1.8;
+    }
+
+
+    /* =========================
+       RESPONSIVIDADE
+       ========================= */
+
+    @media (max-width: 768px) {
+
+        .imagem {
+            background-attachment: scroll;
+        }
+
+        .netuno,
+        .comparacao {
+            padding: 25px;
+        }
+
+    }
+
+</style>
+
+<body>
+
+            <header>
+
+        <nav class="navbar navbar-expand-lg">
+
+            <div class="container-fluid">
+
+                <!-- img home -->
+                <a class="navbar-brand d-flex align-items-center" href="index.html">
+                    <img src="img/icons8-solar-system-72.png" alt="Logo" width="30" height="24"
+                        class="d-inline-block me-2">
+                    Home
+                </a>
+
+                <!-- botão para mobile -->
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Abrir menu">
+
+                    <span class="navbar-toggler-icon"></span>
+
+                </button>
+
+                <!-- links do navbar -->
+                <div class="collapse navbar-collapse" id="navbarNav">
+
+                    <ul class="navbar-nav">
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="sol.html">Sol</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="mercurio.html">Mercúrio</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="venus.html">Vênus</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="terra.html">Terra</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="marte.html">Marte</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="jupiter.html">Júpiter</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="saturno.html">Saturno</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="urano.html">Urano</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="netuno.html">Netuno</a>
+                        </li>
+                         <li class="nav-item">
+                            <a class="nav-link" href="forms.html">Formulário</a>
+                        </li>
+                         <li class="nav-item">
+                            <a class="nav-link" href="galeria.html">Galeria</a>
+                        </li>
+
+                    </ul>
+
+                </div>
+
+            </div>
+
+        </nav>
+
+    </header>
+
+
+    <!-- =========================
+         CAPA
+         ========================= -->
+
+    <section class="imagem">
+
+        <h1>Netuno: o planeta dos ventos mais rápidos</h1>
+
+        <h3>
+
+            <span
+                class="badge text-bg-secondary"
+                data-bs-toggle="tooltip"
+                data-bs-placement="bottom"
+                title="Netuno é classificado como um gigante de gelo.">
+
+                Gigante de Gelo
+
+            </span>
+
+        </h3>
+
+        <a href="#informacoes" class="btn btn-primary mt-4">
+            Explorar Netuno ↓
+        </a>
+
+    </section>
+
+
+    <div class="conteudo-netuno" id="informacoes">
+
+
+        <!-- =========================
+             ALERT
+             ========================= -->
+
+        <div class="alert alert-netuno" role="alert">
+
+            <strong>Você sabia?</strong>
+
+            Netuno é o oitavo e mais distante planeta do Sistema Solar
+            e possui ventos que podem ultrapassar 2.000 km/h.
+
+        </div>
+
+
+        <!-- =========================
+             CARDS
+             ========================= -->
+
+        <div class="row g-4 mt-4">
+
+            <div class="col-md-4">
+
+                <div class="card info-card">
+
+                    <div class="card-body">
+
+                        <h5 class="card-title">
+                            Posição
+                        </h5>
+
+                        <div class="info-numero">
+                            8º
+                        </div>
+
+                        <p class="card-text">
+                            Netuno é o oitavo planeta a partir do Sol.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="col-md-4">
+
+                <div class="card info-card">
+
+                    <div class="card-body">
+
+                        <h5 class="card-title">
+                            Tipo
+                        </h5>
+
+                        <div class="info-numero">
+                            Gigante de Gelo
+                        </div>
+
+                        <p class="card-text">
+                            Netuno é classificado como um gigante de gelo.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="col-md-4">
+
+                <div class="card info-card">
+
+                    <div class="card-body">
+
+                        <h5 class="card-title">
+                            Cor
+                        </h5>
+
+                        <div class="info-numero">
+                            Azul
+                        </div>
+
+                        <p class="card-text">
+                            Netuno possui uma aparência azulada.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- =========================
+             ACCORDION
+             ========================= -->
+
+        <div class="accordion" id="accordionNetuno">
+
+
+            <div class="accordion-item">
+
+                <h2 class="accordion-header">
+
+                    <button
+                        class="accordion-button"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#caracteristicas">
+
+                        Características de Netuno
+
+                    </button>
+
+                </h2>
+
+                <div
+                    id="caracteristicas"
+                    class="accordion-collapse collapse show"
+                    data-bs-parent="#accordionNetuno">
+
+                    <div class="accordion-body">
+
+                        Netuno é o oitavo planeta do Sistema Solar e também
+                        é o planeta mais distante do Sol. Ele é um gigante
+                        de gelo e possui uma atmosfera bastante dinâmica.
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="accordion-item">
+
+                <h2 class="accordion-header">
+
+                    <button
+                        class="accordion-button collapsed"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#composicao">
+
+                        Do que Netuno é feito?
+
+                    </button>
+
+                </h2>
+
+                <div
+                    id="composicao"
+                    class="accordion-collapse collapse"
+                    data-bs-parent="#accordionNetuno">
+
+                    <div class="accordion-body">
+
+                        Netuno possui uma atmosfera formada principalmente
+                        por hidrogênio e hélio, além de metano. Seu interior
+                        contém materiais como água, amônia e metano em
+                        condições de alta pressão.
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="accordion-item">
+
+                <h2 class="accordion-header">
+
+                    <button
+                        class="accordion-button collapsed"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#atmosfera">
+
+                        Como é a atmosfera?
+
+                    </button>
+
+                </h2>
+
+                <div
+                    id="atmosfera"
+                    class="accordion-collapse collapse"
+                    data-bs-parent="#accordionNetuno">
+
+                    <div class="accordion-body">
+
+                        A atmosfera de Netuno possui ventos extremamente
+                        rápidos e grandes tempestades. O metano presente
+                        na atmosfera ajuda a dar ao planeta sua coloração
+                        azulada.
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="accordion-item">
+
+                <h2 class="accordion-header">
+
+                    <button
+                        class="accordion-button collapsed"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#luas">
+
+                        Luas de Netuno
+
+                    </button>
+
+                </h2>
+
+                <div
+                    id="luas"
+                    class="accordion-collapse collapse"
+                    data-bs-parent="#accordionNetuno">
+
+                    <div class="accordion-body">
+
+                        Netuno possui várias luas conhecidas. A maior delas
+                        é Tritão, que é uma das luas mais importantes e
+                        interessantes do Sistema Solar.
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+
+        <!-- =========================
+             VENTOS DE NETUNO
+             ========================= -->
+
+        <section class="netuno">
+
+            <div class="row align-items-center g-5">
+
+                <div class="col-md-6">
+
+                    <img
+                        src="img/FundoDeCadaPagina/fundonetuno.jpg"
+                        alt="Netuno">
+
+                </div>
+
+
+                <div class="col-md-6">
+
+                    <h2>Os ventos de Netuno</h2>
+
+                    <p>
+                        Netuno possui alguns dos ventos mais rápidos já
+                        observados entre os planetas do Sistema Solar.
+                        Eles podem atingir velocidades superiores a
+                        2.000 km/h.
+                    </p>
+
+                    <p>
+                        Além dos ventos intensos, o planeta apresenta
+                        grandes tempestades em sua atmosfera, tornando
+                        Netuno um dos mundos mais dinâmicos do Sistema Solar.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             PROGRESS BAR
+             ========================= -->
+
+        <section class="comparacao">
+
+            <h2>Dimensão de Netuno</h2>
+
+            <p>
+                Netuno possui um diâmetro de aproximadamente 49.244 km,
+                sendo quase quatro vezes maior que o diâmetro da Terra.
+            </p>
+
+            <div class="mb-3">
+                <strong>Netuno</strong>
+            </div>
+
+            <div class="progress">
+
+                <div
+                    class="progress-bar"
+                    role="progressbar"
+                    style="width: 78%;"
+                    aria-valuenow="78"
+                    aria-valuemin="0"
+                    aria-valuemax="100">
+
+                    78% do tamanho representado
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             CURIOSIDADE
+             ========================= -->
+
+        <section class="curiosidade">
+
+            <h2>Curiosidade sobre Netuno</h2>
+
+            <p>
+                Netuno leva aproximadamente 165 anos terrestres para
+                completar uma volta ao redor do Sol. Já um dia no planeta
+                dura cerca de 16 horas.
+            </p>
+
+        </section>
+
+
+    </div>
+
+
+    <!-- =========================
+         FOOTER
+         ========================= -->
+
+    <footer>
+
+        <p>
+
+            Site criado por
+
+            <a
+                href="https://github.com/kawandev22"
+                target="_blank">
+
+                Kawan Rennan
+
+            </a>
+
+            |
+
+            <a
+                href="https://github.com/bielsanatana-dias"
+                target="_blank">
+
+                Gabriel Santana
+
+            </a>
+
+        </p>
+
+    </footer>
+
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+
+
+    <!-- TOOLTIP -->
+    <script>
+
+        const tooltipTriggerList =
+            document.querySelectorAll('[data-bs-toggle="tooltip"]');
+
+        [...tooltipTriggerList].map(
+            tooltipTriggerEl =>
+                new bootstrap.Tooltip(tooltipTriggerEl)
+        );
+
+    </script>
+
+</body>
+
+</html>

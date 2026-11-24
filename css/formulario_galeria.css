@@ -1,0 +1,174 @@
+
+
+
+/* =========================
+   PÁGINA DE DADOS
+========================= */
+
+.dados-pagina {
+    padding: 50px 20px;
+    color: white;
+}
+
+.dados-container {
+    width: 90%;
+    max-width: 700px;
+    margin: 0 auto;
+
+    padding: 30px;
+
+    background: rgba(15, 23, 42, 0.85);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 25px;
+
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(8px);
+}
+
+.dados-container h1 {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.dado {
+    margin: 15px 0;
+    padding: 12px;
+
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 10px;
+
+    overflow-wrap: anywhere;
+}
+
+.dado strong {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.botao-voltar {
+    display: block;
+    margin-top: 25px;
+    padding: 12px;
+
+    text-align: center;
+    text-decoration: none;
+    color: white;
+
+    background: rgba(59, 130, 246, 0.7);
+    border-radius: 12px;
+
+    transition: 0.3s;
+}
+
+.botao-voltar:hover {
+    color: white;
+    background: rgba(59, 130, 246, 1);
+}
+
+
+/* =========================
+   GALERIA DO SOL
+========================= */
+
+.galeria-sol {
+    padding: 50px 20px;
+    color: white;
+}
+
+.galeria-container {
+    width: 90%;
+    max-width: 900px;
+    margin: 0 auto;
+
+    padding: 25px;
+
+    text-align: center;
+
+    background: rgba(15, 23, 42, 0.85);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 25px;
+
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(8px);
+}
+
+.galeria-container h2 {
+    margin-bottom: 10px;
+}
+
+.imagem-principal {
+    width: 100%;
+    height: 450px;
+    margin-top: 25px;
+
+    overflow: hidden;
+    border-radius: 18px;
+}
+
+.imagem-principal img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: contain;
+    background: rgba(0, 0, 0, 0.2);
+
+    transition: 0.3s;
+}
+
+.miniatura-barra {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+
+    margin-top: 20px;
+}
+
+.miniatura {
+    width: 130px;
+    height: 90px;
+
+    object-fit: cover;
+    cursor: pointer;
+
+    border: 2px solid transparent;
+    border-radius: 12px;
+
+    opacity: 0.7;
+    transition: 0.3s;
+}
+
+.miniatura:hover {
+    opacity: 1;
+    transform: scale(1.05);
+}
+
+.miniatura.selecionada {
+    border-color: rgba(150, 190, 255, 0.9);
+    opacity: 1;
+}
+
+
+/* =========================
+   RESPONSIVIDADE
+========================= */
+
+@media (max-width: 600px) {
+
+    .formulario-container,
+    .dados-container,
+    .galeria-container {
+        width: 100%;
+        padding: 20px;
+    }
+
+    .imagem-principal {
+        height: 250px;
+    }
+
+    .miniatura {
+        width: 85px;
+        height: 65px;
+    }
+
+}

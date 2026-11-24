@@ -1,0 +1,399 @@
+
+/* =================================
+   PÁGINA DO FORMULÁRIO
+================================= */
+
+.pagina-formulario {
+    width: 100%;
+    min-height: 100vh;
+
+    padding: 100px 15px 50px;
+
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+
+/* =================================
+   CAIXA PRINCIPAL
+================================= */
+
+.formulario-contato {
+    width: 100%;
+    max-width: 850px;
+
+    margin: 0 auto;
+    padding: 35px;
+
+    color: white;
+
+    background: rgba(15, 23, 42, 0.90);
+
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 22px;
+
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.35);
+
+    backdrop-filter: blur(10px);
+}
+
+
+/* =================================
+   CABEÇALHO
+================================= */
+
+.formulario-etiqueta {
+    display: inline-block;
+
+    padding: 6px 14px;
+
+    color: #93c5fd;
+
+    background: rgba(59, 130, 246, 0.12);
+
+    border: 1px solid rgba(147, 197, 253, 0.25);
+    border-radius: 30px;
+
+    font-size: 12px;
+    letter-spacing: 2px;
+    font-weight: bold;
+}
+
+
+.formulario-contato h1 {
+    color: white;
+
+    font-size: 32px;
+    font-weight: bold;
+}
+
+
+.descricao-formulario {
+    max-width: 500px;
+
+    margin: 10px auto 0;
+
+    color: #cbd5e1;
+
+    font-size: 15px;
+    line-height: 1.6;
+}
+
+
+/* =================================
+   DIVISÓRIAS
+================================= */
+
+.linha-formulario {
+    margin: 28px 0;
+
+    border-color: rgba(255, 255, 255, 0.15);
+
+    opacity: 1;
+}
+
+
+/* =================================
+   SEÇÕES
+================================= */
+
+.secao-formulario {
+    margin-bottom: 10px;
+}
+
+
+.titulo-secao {
+    display: flex;
+    align-items: center;
+
+    gap: 12px;
+
+    margin-bottom: 20px;
+
+    color: white;
+
+    font-size: 19px;
+    font-weight: bold;
+}
+
+
+.titulo-secao span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 32px;
+    height: 32px;
+
+    color: #93c5fd;
+
+    background: rgba(59, 130, 246, 0.15);
+
+    border: 1px solid rgba(147, 197, 253, 0.25);
+    border-radius: 9px;
+
+    font-size: 12px;
+}
+
+
+/* =================================
+   LABELS
+================================= */
+
+.formulario-contato .form-label {
+    display: block;
+
+    margin-bottom: 8px;
+
+    color: #e2e8f0;
+
+    font-size: 14px;
+    font-weight: 600;
+}
+
+
+/* =================================
+   CAMPOS DE TEXTO
+================================= */
+
+.formulario-contato .form-control,
+.formulario-contato .form-select {
+
+    min-height: 45px;
+
+    padding: 11px 14px;
+
+    color: white;
+
+    background-color: rgba(255, 255, 255, 0.06);
+
+    border: 1px solid rgba(255, 255, 255, 0.16);
+    border-radius: 10px;
+
+    font-size: 14px;
+
+    transition: 0.25s;
+}
+
+
+/* PLACEHOLDER */
+
+.formulario-contato .form-control::placeholder {
+    color: #94a3b8;
+}
+
+
+/* CAMPO SELECIONADO */
+
+.formulario-contato .form-control:focus,
+.formulario-contato .form-select:focus {
+
+    color: white;
+
+    background-color: rgba(255, 255, 255, 0.09);
+
+    border-color: #60a5fa;
+
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.15);
+
+    outline: none;
+}
+
+
+/* DATA */
+
+.formulario-contato input[type="date"] {
+    color-scheme: dark;
+}
+
+
+/* SELECT */
+
+.formulario-contato .form-select option {
+    color: white;
+
+    background-color: #0f172a;
+}
+
+
+/* TEXTAREA */
+
+.formulario-contato textarea {
+    resize: vertical;
+}
+
+
+/* =================================
+   FIELDSET
+================================= */
+
+.grupo-formulario {
+    padding: 18px;
+
+    background: rgba(255, 255, 255, 0.025);
+
+    border: 1px solid rgba(255, 255, 255, 0.14);
+    border-radius: 12px;
+}
+
+
+.grupo-formulario legend {
+    float: none;
+    width: auto;
+
+    padding: 0 8px;
+
+    color: #e2e8f0;
+
+    font-size: 14px;
+    font-weight: bold;
+}
+
+
+/* =================================
+   CHECKBOX E RADIO
+================================= */
+
+.formulario-contato .form-check {
+    margin-bottom: 8px;
+}
+
+
+.formulario-contato .form-check-input {
+    background-color: rgba(255, 255, 255, 0.08);
+
+    border-color: rgba(255, 255, 255, 0.3);
+
+    cursor: pointer;
+}
+
+
+.formulario-contato .form-check-input:checked {
+    background-color: #3b82f6;
+
+    border-color: #3b82f6;
+}
+
+
+.formulario-contato .form-check-input:focus {
+    border-color: #60a5fa;
+
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.15);
+}
+
+
+.formulario-contato .form-check-label {
+    color: #cbd5e1;
+
+    font-size: 14px;
+
+    cursor: pointer;
+}
+
+
+/* =================================
+   BOTÃO ENVIAR
+================================= */
+
+.botao-formulario {
+    display: block;
+
+    width: 100%;
+
+    padding: 13px 20px;
+
+    color: white;
+
+    background: linear-gradient(
+        135deg,
+        #2563eb,
+        #3b82f6
+    );
+
+    border: 1px solid rgba(147, 197, 253, 0.3);
+    border-radius: 12px;
+
+    font-size: 15px;
+    font-weight: bold;
+
+    transition: 0.3s;
+}
+
+
+.botao-formulario:hover {
+    color: white;
+
+    background: linear-gradient(
+        135deg,
+        #1d4ed8,
+        #2563eb
+    );
+
+    transform: translateY(-2px);
+
+    box-shadow: 0 6px 20px rgba(37, 99, 235, 0.25);
+}
+
+
+/* =================================
+   TEXTO FINAL
+================================= */
+
+.texto-rodape-formulario {
+    margin-top: 18px;
+    margin-bottom: 0;
+
+    color: #94a3b8;
+
+    font-size: 12px;
+    text-align: center;
+}
+
+
+/* =================================
+   RESPONSIVIDADE
+================================= */
+
+@media (max-width: 768px) {
+
+    .pagina-formulario {
+        padding: 85px 12px 30px;
+    }
+
+    .formulario-contato {
+        padding: 25px 20px;
+
+        border-radius: 17px;
+    }
+
+    .formulario-contato h1 {
+        font-size: 27px;
+    }
+
+    .titulo-secao {
+        font-size: 17px;
+    }
+
+    .grupo-formulario {
+        padding: 15px;
+    }
+
+}
+
+
+@media (max-width: 400px) {
+
+    .formulario-contato {
+        padding: 22px 15px;
+    }
+
+    .formulario-contato h1 {
+        font-size: 24px;
+    }
+
+    .formulario-etiqueta {
+        font-size: 10px;
+    }
+
+}
