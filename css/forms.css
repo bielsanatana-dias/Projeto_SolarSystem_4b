@@ -1,7 +1,5 @@
 
-/* =================================
-   PÁGINA DO FORMULÁRIO
-================================= */
+
 
 .pagina-formulario {
     width: 100%;
@@ -15,9 +13,7 @@
 }
 
 
-/* =================================
-   CAIXA PRINCIPAL
-================================= */
+
 
 .formulario-contato {
     width: 100%;
@@ -39,9 +35,7 @@
 }
 
 
-/* =================================
-   CABEÇALHO
-================================= */
+
 
 .formulario-etiqueta {
     display: inline-block;
@@ -81,9 +75,6 @@
 }
 
 
-/* =================================
-   DIVISÓRIAS
-================================= */
 
 .linha-formulario {
     margin: 28px 0;
@@ -94,9 +85,7 @@
 }
 
 
-/* =================================
-   SEÇÕES
-================================= */
+
 
 .secao-formulario {
     margin-bottom: 10px;
@@ -137,9 +126,7 @@
 }
 
 
-/* =================================
-   LABELS
-================================= */
+
 
 .formulario-contato .form-label {
     display: block;
@@ -153,9 +140,8 @@
 }
 
 
-/* =================================
-   CAMPOS DE TEXTO
-================================= */
+
+
 
 .formulario-contato .form-control,
 .formulario-contato .form-select {
@@ -177,14 +163,14 @@
 }
 
 
-/* PLACEHOLDER */
+
 
 .formulario-contato .form-control::placeholder {
     color: #94a3b8;
 }
 
 
-/* CAMPO SELECIONADO */
+
 
 .formulario-contato .form-control:focus,
 .formulario-contato .form-select:focus {
@@ -201,14 +187,14 @@
 }
 
 
-/* DATA */
+
 
 .formulario-contato input[type="date"] {
     color-scheme: dark;
 }
 
 
-/* SELECT */
+
 
 .formulario-contato .form-select option {
     color: white;
@@ -217,16 +203,14 @@
 }
 
 
-/* TEXTAREA */
+
 
 .formulario-contato textarea {
     resize: vertical;
 }
 
 
-/* =================================
-   FIELDSET
-================================= */
+
 
 .grupo-formulario {
     padding: 18px;
@@ -251,9 +235,7 @@
 }
 
 
-/* =================================
-   CHECKBOX E RADIO
-================================= */
+
 
 .formulario-contato .form-check {
     margin-bottom: 8px;
@@ -292,9 +274,6 @@
 }
 
 
-/* =================================
-   BOTÃO ENVIAR
-================================= */
 
 .botao-formulario {
     display: block;
@@ -336,9 +315,7 @@
 }
 
 
-/* =================================
-   TEXTO FINAL
-================================= */
+
 
 .texto-rodape-formulario {
     margin-top: 18px;
@@ -351,9 +328,7 @@
 }
 
 
-/* =================================
-   RESPONSIVIDADE
-================================= */
+
 
 @media (max-width: 768px) {
 

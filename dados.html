@@ -22,14 +22,14 @@
 
             <div class="container-fluid">
 
-                <!-- img home -->
+               
                 <a class="navbar-brand d-flex align-items-center" href="index.html">
                     <img src="img/icons8-solar-system-72.png" alt="Logo" width="30" height="24"
                         class="d-inline-block me-2">
                     Home
                 </a>
 
-                <!-- botão para mobile -->
+                
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                     aria-controls="navbarNav" aria-expanded="false" aria-label="Abrir menu">
 
@@ -37,7 +37,7 @@
 
                 </button>
 
-                <!-- links do navbar -->
+          
                 <div class="collapse navbar-collapse" id="navbarNav">
 
                     <ul class="navbar-nav">
@@ -161,14 +161,14 @@
             const telefone = params.get("telefone");
             const nascimento = params.get("nascimento");
 
-            // Recebe todos os meios de transporte selecionados
+            
             const transporte = params.getAll("transporte");
 
             const genero = params.get("genero");
             const assunto = params.get("assunto");
             const mensagem = params.get("mensagem");
 
-            // Mostra os dados na página
+           
             document.getElementById("nome").textContent =
                 nome || "Não informado";
 
@@ -187,13 +187,13 @@
             document.getElementById("mensagem").textContent =
                 mensagem || "Não informado";
 
-            // Mostra os transportes escolhidos
+          
             if (transporte.length > 0) {
                 document.getElementById("transporte").textContent =
                     transporte.join(", ");
             }
 
-            // Formata a data de nascimento
+          
             if (nascimento) {
 
                 const ano = nascimento.substring(0, 4);
